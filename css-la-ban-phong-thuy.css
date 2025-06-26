@@ -1,0 +1,63 @@
+ body {
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+        
+        .compass-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 450px; 
+            margin: auto;
+            border-radius: 50%;
+        }
+        
+        /* Class for the compass image to apply a perfect circular shadow */
+        .compass-image {
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+        }
+
+        #compass-svg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; /* Ensures overlay also fits the circle */
+        }
+
+        #compass-svg-overlay .direction-slice {
+            fill: transparent; 
+            cursor: pointer;
+            transition: fill 0.3s ease;
+        }
+        
+        /* Hover effect is a more visible semi-transparent red */
+        #compass-svg-overlay .direction-slice:hover {
+            fill: rgba(220, 38, 38, 0.4); 
+        }
+        
+        /* Color classes for different qualities */
+        .text-good-very { color: #16a34a; } .border-good-very { border-color: #16a34a; }
+        .text-good-normal { color: #2563eb; } .border-good-normal { border-color: #2563eb; }
+        .text-good-less { color: #f97316; } .border-good-less { border-color: #f97316; }
+        .text-good-least { color: #ca8a04; } .border-good-least { border-color: #ca8a04; }
+        .text-bad-very { color: #dc2626; } .border-bad-very { border-color: #dc2626; }
+        .text-bad-normal { color: #475569; } .border-bad-normal { border-color: #475569; }
+        .text-bad-less { color: #9333ea; } .border-bad-less { border-color: #9333ea; }
+        .text-bad-least { color: #db2777; } .border-bad-least { border-color: #db2777; }
+
+        /* Highlight opacity remains at 0.8 as requested */
+        .fill-good-very { fill: rgba(22, 163, 74, 0.8); }
+        .fill-good-normal { fill: rgba(37, 99, 235, 0.8); }
+        .fill-good-less { fill: rgba(249, 115, 22, 0.8); }
+        .fill-good-least { fill: rgba(202, 138, 4, 0.8); }
+        .fill-bad-very { fill: rgba(220, 38, 38, 0.8); }
+        .fill-bad-normal { fill: rgba(71, 85, 105, 0.8); }
+        .fill-bad-less { fill: rgba(147, 51, 234, 0.8); }
+        .fill-bad-least { fill: rgba(219, 39, 119, 0.8); }
+        .fill-default { fill: transparent; }
+
+        /* AI-related styling */
+        .ai-button { background: linear-gradient(90deg, #4f46e5, #a855f7); transition: all 0.3s ease; }
+        .ai-button:hover { box-shadow: 0 0 20px #a855f799; }
+        .ai-result { background: #f3e8ff; border-left: 4px solid #a855f7; }
+        .user-question { background-color: #eef2ff; border-left: 4px solid #4f46e5; }
