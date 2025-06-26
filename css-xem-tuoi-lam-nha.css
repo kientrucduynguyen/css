@@ -1,37 +1,40 @@
-        body, button, input, select, textarea {
+ /* General Styling */
+        #xem-tuoi-lam-nha, #xem-tuoi-lam-nha button, #xem-tuoi-lam-nha input, #xem-tuoi-lam-nha select, #xem-tuoi-lam-nha textarea {
             font-family: 'Bai Jamjuree', sans-serif;
         }
-        .result-item-good { border-left: 4px solid #22c55e; }
-        .result-item-bad { border-left: 4px solid #ef4444; }
-        .ket-luan-tot { background-color: #dcfce7; border-color: #22c55e; color: #166534; }
-        .ket-luan-xau { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
-        .gradient-button {
+        #xem-tuoi-lam-nha .result-item-good { border-left: 4px solid #22c55e; }
+        #xem-tuoi-lam-nha .result-item-bad { border-left: 4px solid #ef4444; }
+        #xem-tuoi-lam-nha .ket-luan-tot { background-color: #dcfce7; border-color: #22c55e; color: #166534; }
+        #xem-tuoi-lam-nha .ket-luan-xau { background-color: #fee2e2; border-color: #ef4444; color: #991b1b; }
+        #xem-tuoi-lam-nha .gradient-button {
             background: linear-gradient(95deg, #1e40af, #60a5fa);
             transition: all 0.3s ease-in-out;
         }
-        .gradient-button:hover {
+        #xem-tuoi-lam-nha .gradient-button:hover {
             box-shadow: 0 0 25px #60a5fa99;
             transform: translateY(-2px);
         }
-        .ai-result-container {
+        #xem-tuoi-lam-nha .ai-result-container {
             background: #eef2ff;
             border-left: 4px solid #3b82f6;
         }
-        .form-container {
+        #xem-tuoi-lam-nha .form-container {
             background-color: #f8fafc;
             border: 1px solid #e2e8f0;
         }
-        .spinner {
+        #xem-tuoi-lam-nha .spinner {
             border: 2px solid rgba(255,255,255,0.3);
             border-top: 2px solid #fff;
             border-radius: 50%;
             width: 16px;
             height: 16px;
-            animation: spin 1s linear infinite;
+            /* Thay đổi tên animation để tránh trùng lặp */
+            animation: spin-xem-tuoi 1s linear infinite;
         }
-        @keyframes spin {
+        /* Thay đổi tên @keyframes để tránh trùng lặp */
+        @keyframes spin-xem-tuoi {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        .user-message { background-color: #e0e7ff; border-right: 3px solid #4f46e5; }
-        .ai-message { background-color: #f0f5ff; border-left: 3px solid #3b82f6; }
+        #xem-tuoi-lam-nha .user-message { background-color: #e0e7ff; border-right: 3px solid #4f46e5; }
+        #xem-tuoi-lam-nha .ai-message { background-color: #f0f5ff; border-left: 3px solid #3b82f6; }
