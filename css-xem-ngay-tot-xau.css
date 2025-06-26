@@ -1,0 +1,155 @@
+ /* --- NEW THEME STYLING --- */
+        body, button, input, select, textarea {
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+        .ai-button {
+            background: linear-gradient(90deg, #dc2626, #f97316); /* red-600 to orange-500 */
+            transition: all 0.3s ease;
+        }
+        .ai-button:hover {
+            box-shadow: 0 0 20px #f9731699;
+        }
+        .ai-result { background: #fffbeb; border-left: 4px solid #f59e0b; } /* amber-100 & amber-500 */
+        .user-question { background-color: #fff7ed; border-left: 4px solid #fb923c; } /* orange-100 & orange-400 */
+        .spinner {
+             animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+             0% { transform: rotate(0deg); }
+             100% { transform: rotate(360deg); }
+        }
+        
+        /* --- CUSTOM STYLES FOR THIS TOOL --- */
+
+        /* Daily Calendar Styling */
+        .calendar-sheet {
+            background-color: #fff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            overflow: hidden;
+            position: relative;
+            border-radius: 0.75rem;
+        }
+        .calendar-header { padding: 0.5rem; color: white; text-align: center; font-weight: bold; }
+        .solar-header { background-color: #c2410c; } /* orange-800 */
+        .lunar-header { background-color: #ea580c; } /* orange-600 */
+        .calendar-body { 
+            padding: 1rem; 
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 230px;
+        }
+        .calendar-day-main { font-size: 6rem; line-height: 1; font-weight: 700; }
+        .calendar-fulldate-container { min-height: 80px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .calendar-fulldate { font-weight: 600; font-size: 1.125rem; }
+        .zodiac-icon-daily { 
+            font-size: 5rem;
+            opacity: 0.08;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            pointer-events: none;
+        }
+        
+        /* Monthly Calendar Styling */
+        .monthly-calendar-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background-color: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-bottom: none;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+        .monthly-calendar-nav button {
+            background: #e5e7eb;
+            color: #4b5563;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s;
+        }
+        .monthly-calendar-nav button:hover {
+            background: #d1d5db;
+        }
+        .monthly-calendar-grid {
+            display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 1px; background-color: #d1d5db; border: 1px solid #d1d5db;
+        }
+        .calendar-cell { 
+            background-color: #fff; 
+            padding: 0.5rem 0.25rem; 
+            min-height: 110px; 
+            position: relative; 
+            display: flex; flex-direction: column; 
+            justify-content: flex-start; align-items: center; 
+            transition: background-color 0.2s; 
+            font-size: 1rem;
+        }
+        .calendar-cell.has-data { cursor: pointer; }
+        .calendar-cell.has-data:hover { background-color: #fffbeb; } /* amber-100 */
+        .calendar-cell .solar-date-in-cell { font-size: 2.25rem; font-weight: 700; line-height: 1; }
+        .calendar-cell .lunar-date-in-cell { font-size: 1.125rem; color: #6b7280; font-weight: 500;}
+        .calendar-cell .can-chi-in-cell { font-size: 0.8rem; color: #9ca3af; display: flex; align-items: center; gap: 4px; }
+        .can-chi-in-cell .zodiac-icon-monthly { font-size: 1.1rem; }
+        .is-sunday .solar-date-in-cell { color: #dc2626; }
+        .is-today { box-shadow: inset 0 0 0 2px #c2410c; }
+        .selected { background-color: #f97316 !important; color: white !important; font-weight: bold; box-shadow: inset 0 0 0 2px #c2410c; }
+        .selected .lunar-date-in-cell, .selected .can-chi-in-cell, .selected .can-chi-in-cell span { color: #fff !important; }
+        .day-name { background-color: #f9fafb; color: #4b5563; font-weight: bold; padding: 0.5rem; text-align: center; border-bottom: 1px solid #e5e7eb;}
+        .day-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 6px;
+            right: 6px;
+        }
+        .dot-hoang-dao { background-color: #facc15; } /* Yellow */
+        .dot-hac-dao { background-color: #6b7280; } /* Gray */
+
+        /* Detail Section Styling */
+        .hour-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            text-align: center;
+        }
+        .hour-icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+        }
+        .hour-text { font-size: 0.8rem; font-weight: 500; }
+        
+        /* New Table Styling */
+        .detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .detail-table th, .detail-table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        .detail-table th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        .detail-table td:first-child {
+            font-weight: 500;
+        }
