@@ -1,0 +1,52 @@
+ /* General Styling */
+        #chon-cay-phong-thuy, #chon-cay-phong-thuy button, #chon-cay-phong-thuy input, #chon-cay-phong-thuy select, #chon-cay-phong-thuy textarea {
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+        #chon-cay-phong-thuy .gradient-button {
+            background: linear-gradient(95deg, #059669, #34d399);
+            transition: all 0.3s ease-in-out;
+        }
+        #chon-cay-phong-thuy .gradient-button:hover {
+            box-shadow: 0 0 25px #34d39999;
+            transform: translateY(-2px);
+        }
+        #chon-cay-phong-thuy .form-container {
+            background-color: #f8fafc; /* bg-slate-50 */
+            border: 1px solid #e2e8f0;
+        }
+        #chon-cay-phong-thuy .spinner {
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid #fff;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            /* Thay đổi tên animation để tránh trùng lặp */
+            animation: spin-chon-cay 1s linear infinite;
+        }
+        /* Thay đổi tên @keyframes để tránh trùng lặp */
+        @keyframes spin-chon-cay {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #chon-cay-phong-thuy .plant-card-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #e2e8f0; /* Fallback background */
+        }
+        #chon-cay-phong-thuy .info-panel-bg {
+            background-color: #f0fdf4; /* Corresponds to bg-green-50 */
+        }
+        #chon-cay-phong-thuy .analysis-section-bg {
+            background-color: #f8fafc; /* Corresponds to bg-slate-50 */
+        }
+        #chon-cay-phong-thuy .plant-group-item-bg {
+            background-color: #f1f5f9; /* Corresponds to bg-slate-100 */
+        }
+        #chon-cay-phong-thuy .ai-result-container {
+            background: #dcfce7; 
+            border-left: 4px solid #22c55e;
+        }
+        #chon-cay-phong-thuy .user-message { background-color: #d1fae5; border-right: 3px solid #059669; }
+        #chon-cay-phong-thuy .ai-message { background-color: #e7f9f2; border-left: 3px solid #10b981; }
