@@ -1,0 +1,50 @@
+/* General Styling */
+        #chon-mau-phong-thuy, #chon-mau-phong-thuy button, #chon-mau-phong-thuy input, #chon-mau-phong-thuy select, #chon-mau-phong-thuy textarea {
+            font-family: 'Bai Jamjuree', sans-serif;
+        }
+        #chon-mau-phong-thuy .gradient-button {
+            background: linear-gradient(95deg, #4f46e5, #a855f7);
+            transition: all 0.3s ease-in-out;
+        }
+        #chon-mau-phong-thuy .gradient-button:hover {
+            box-shadow: 0 0 25px #a855f799;
+            transform: translateY(-2px);
+        }
+        #chon-mau-phong-thuy .form-container {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+        #chon-mau-phong-thuy .spinner {
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid #fff;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin-chon-mau 1s linear infinite; /* Đổi tên animation để tránh trùng lặp */
+        }
+        @keyframes spin-chon-mau { /* Đổi tên animation */
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #chon-mau-phong-thuy .color-swatch {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 4px 12px -1px rgb(0 0 0 / 0.1), 0 2px 8px -2px rgb(0 0 0 / 0.1);
+        }
+        #chon-mau-phong-thuy .info-panel-bg {
+             background-color: #eef2ff;
+        }
+        #chon-mau-phong-thuy .analysis-section-bg {
+            background-color: #f8fafc;
+        }
+        #chon-mau-phong-thuy .color-group-item-bg {
+            background-color: #f1f5f9;
+        }
+        #chon-mau-phong-thuy .ai-result-container {
+            background: #f3e8ff;
+            border-left: 4px solid #a855f7;
+        }
+        #chon-mau-phong-thuy .user-message { background-color: #ede9fe; border-right: 3px solid #6d28d9; }
+        #chon-mau-phong-thuy .ai-message { background-color: #f5f3ff; border-left: 3px solid #8b5cf6; }
